@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Shop Cart — Online Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="announcement"><span>✨</span> Fashion, home & more — all at prices you'll love! <a href="#products">Shop
+      now <span aria-hidden="true">→</span></a></div>
+
+  <header class="site-header">
+    <div class="header-main page-wrap">
+      <a class="brand" href="#top" aria-label="Shop Cart home">Shop Cart <span> .</span></a>
+      <form class="search-box" id="searchForm" role="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 4.4 4.4"></path>
+        </svg>
+        <input id="searchInput" type="search" placeholder="Try Saree, Kurti or Search by Product Code"
+          aria-label="Search products">
+        <button type="submit">Search</button>
+      </form>
+      <div class="header-actions">
+        <button class="header-link app-link" type="button"><svg class="action-icon" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <rect x="6" y="2.5" width="12" height="19" rx="2.5"></rect>
+            <path d="M12 7v6m-2.5-2.5L12 13l2.5-2.5M10 18h4"></path>
+          </svg><span>Download App</span></button>
+        <button class="header-link" type="button"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 10h18l-1.5-6h-15L3 10Zm1 0v10h16V10M9 20v-6h6v6"></path>
+            <path d="M3 10a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0"></path>
+          </svg><span>Become a Supplier</span></button>
+        <button class="header-link profile-link" id="profileTrigger" type="button" aria-label="Login or sign up"><svg
+            class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.5"></circle>
+            <path d="M5 20a7 7 0 0 1 14 0"></path>
+          </svg><span id="profileLabel">Login / Signup</span></button>
+        <button class="header-link cart-trigger" id="cartTrigger" type="button" aria-label="Open cart"><span
+            class="cart-icon-wrap"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h8.3a2 2 0 0 0 1.9-1.5L21 8H6"></path>
+              <circle cx="10" cy="20" r="1"></circle>
+              <circle cx="18" cy="20" r="1"></circle>
+            </svg><b id="cartCount">0</b></span><span>Cart</span></button>
+      </div>
+    </div>
+    <nav class="category-nav" aria-label="Shop by category">
+      <div class="page-wrap category-scroll">
+        <div class="nav-item"><a class="nav-category active" href="#products" data-category="All">All</a></div>
+        <div class="nav-item"><a class="nav-category" href="#products" data-category="Women Ethnic">Women Ethnic <span
+              class="nav-caret">▾</span></a>
+          <div class="nav-dropdown"><strong>Women Ethnic</strong><a href="#products" data-category="Women Ethnic">Kurtas
+              &amp; Kurtis</a><a href="#products" data-category="Women Ethnic">Sarees &amp; Blouses</a><a
+              href="#products" data-category="Women Ethnic">Suits &amp; Sets</a><a href="#products"
+              data-category="Women Ethnic">Dupattas</a></div>
+        </div>
+        <div class="nav-item"><a class="nav-category" href="#products" data-category="Women Western">Women Western <span
+              class="nav-caret">▾</span></a>
+          <div class="nav-dropdown"><strong>Women Western</strong><a href="#products"
+              data-category="Women Western">Dresses &amp; Jumpsuits</a><a href="#products"
+              data-category="Women Western">Tops &amp; Tees</a><a href="#products" data-category="Women Western">Co-ord
+              Sets</a><a href="#products" data-category="Women Western">Watches</a></div>
+        </div>
+        <div class="nav-item"><a class="nav-category" href="#products" data-category="Men">Men <span
+              class="nav-caret">▾</span></a>
+          <div class="nav-dropdown"><strong>Men</strong><a href="#products" data-category="Men">Shirts &amp;
+              T-shirts</a><a href="#products" data-category="Men">Shoes &amp; Sneakers</a><a href="#products"
+              data-category="Men">Watches</a><a href="#products" data-category="Men">Everyday essentials</a></div>
+        </div>
+        <div class="nav-item"><a class="nav-category" href="#products" data-category="Kids">Kids <span
+              class="nav-caret">▾</span></a>
+          <div class="nav-dropdown"><strong>Kids</strong><a href="#products" data-category="Kids">Clothing</a><a
+              href="#products" data-category="Kids">Toys &amp; Games</a><a href="#products" data-category="Kids">Baby
+              essentials</a></div>
+        </div>
+        <div class="nav-item"><a class="nav-category" href="#products" data-category="Home & Kitchen">Home &amp; Kitchen
+            <span class="nav-caret">▾</span></a>
+          <div class="nav-dropdown"><strong>Home &amp; Kitchen</strong><a href="#products"
+              data-category="Home & Kitchen">Bedsheets &amp; Covers</a><a href="#products"
+              data-category="Home & Kitchen">Decor &amp; Planters</a><a href="#products"
+              data-category="Home & Kitchen">Kitchen essentials</a></div>
+        </div>
+        <div class="nav-item"><a class="nav-category" href="#products" data-category="Beauty & Health">Beauty &amp;
+            Health <span class="nav-caret">▾</span></a>
+          <div class="nav-dropdown"><strong>Beauty &amp; Health</strong><a href="#products"
+              data-category="Beauty & Health">Makeup</a><a href="#products"
+              data-category="Beauty & Health">Skincare</a><a href="#products" data-category="Beauty & Health">Personal
+              care</a></div>
+        </div>
+        <div class="nav-item"><a class="nav-category" href="#products" data-category="Jewellery">Jewellery <span
+              class="nav-caret">▾</span></a>
+          <div class="nav-dropdown"><strong>Jewellery</strong><a href="#products"
+              data-category="Jewellery">Earrings</a><a href="#products" data-category="Jewellery">Necklaces</a><a
+              href="#products" data-category="Jewellery">Everyday accessories</a></div>
+        </div>
+        <div class="nav-item"><a class="nav-category" href="#products" data-category="Bags & Footwear">Bags &amp;
+            Footwear <span class="nav-caret">▾</span></a>
+          <div class="nav-dropdown"><strong>Bags &amp; Footwear</strong><a href="#products"
+              data-category="Bags & Footwear">Handbags &amp; Totes</a><a href="#products"
+              data-category="Bags & Footwear">Backpacks</a><a href="#products"
+              data-category="Bags & Footwear">Footwear</a></div>
+        </div>
+        <div class="nav-item"><a class="nav-category" href="#products" data-category="Electronics">Electronics <span
+              class="nav-caret">▾</span></a>
+          <div class="nav-dropdown"><strong>Electronics</strong><a href="#products" data-category="Electronics">Audio
+              &amp; Earbuds</a><a href="#products" data-category="Electronics">Mobile accessories</a><a href="#products"
+              data-category="Electronics">Smart essentials</a></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero page-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> INDIA'S FAVOURITE ONLINE SHOPPING APP</p>
+        <h1>Style that feels<br>like <em>you.</em></h1>
+        <p class="hero-description">Trendy finds, happy prices. Discover something you'll love today.</p>
+        <div class="hero-perks"><span>♡ Easy returns</span><i></i><span>🚚 Cash on delivery</span></div>
+        <a class="primary-button" href="#products">Explore collection <span>↗</span></a>
+        <div class="hero-social-proof">
+          <div class="avatar-stack"><span>👩🏽</span><span>👩🏻</span><span>👩🏾</span></div>
+          <div><strong>10M+ happy shoppers</strong><small>finding their style every day</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-slideshow" id="heroSlideshow" aria-label="Featured catalog images">
+          <img class="hero-image is-active"
+            src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+            alt="Colorful ethnic fashion collection" fetchpriority="high">
+          <img class="hero-image"
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+            alt="Latest western wear collection">
+          <img class="hero-image"
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+            alt="Home and living collection">
+        </div>
+        <div class="hero-slide-controls" role="group" aria-label="Choose featured catalog image">
+          <button class="hero-slide-dot is-active" type="button" aria-label="Show catalog image 1"
+            aria-pressed="true"></button>
+          <button class="hero-slide-dot" type="button" aria-label="Show catalog image 2" aria-pressed="false"></button>
+          <button class="hero-slide-dot" type="button" aria-label="Show catalog image 3" aria-pressed="false"></button>
+        </div>
+        <div class="hero-sticker sticker-top">TRENDING<br><strong>NOW ✦</strong></div>
+        <div class="hero-price"><span>Starting at</span><strong>₹199</strong><small>Styles worth smiling for</small>
+        </div>
+        <div class="hero-dot-pattern"></div>
+      </div>
+    </section>
+
+    <section class="trust-strip page-wrap" aria-label="Shopping benefits">
+      <div><span class="trust-icon pink">↩</span><span><strong>7 Days Easy Return</strong><small>Shop
+            worry-free</small></span></div>
+      <div><span class="trust-icon yellow">₹</span><span><strong>Cash on Delivery</strong><small>Pay your
+            way</small></span></div>
+      <div><span class="trust-icon green">♧</span><span><strong>Lowest Prices</strong><small>More for
+            less</small></span></div>
+      <div><span class="trust-icon purple">✦</span><span><strong>Quality Finds</strong><small>Picked for
+            you</small></span></div>
+    </section>
+
+    <section class="category-section page-wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A LITTLE SOMETHING FOR EVERYONE</p>
+          <h2>Shop by category</h2>
+        </div><a href="#products" class="text-link">View all <span>→</span></a>
+      </div>
+      <div class="category-cards">
+        <button class="category-card category-women" data-category="Women Ethnic"><span
+            class="category-photo"></span><span class="category-card-copy"><small>Beautiful
+              everyday</small><strong>Women Ethnic</strong><i>Shop now ↗</i></span><span
+            class="category-number">01</span></button>
+        <button class="category-card category-western" data-category="Women Western"><span
+            class="category-photo"></span><span class="category-card-copy"><small>Made for your
+              mood</small><strong>Western Wear</strong><i>Shop now ↗</i></span><span
+            class="category-number">02</span></button>
+        <button class="category-card category-home" data-category="Home & Kitchen"><span
+            class="category-photo"></span><span class="category-card-copy"><small>Make it feel like
+              home</small><strong>Home & Living</strong><i>Shop now ↗</i></span><span
+            class="category-number">03</span></button>
+        <button class="category-card category-beauty" data-category="Beauty & Health"><span
+            class="category-photo"></span><span class="category-card-copy"><small>Your little
+              ritual</small><strong>Beauty & Care</strong><i>Shop now ↗</i></span><span
+            class="category-number">04</span></button>
+      </div>
+    </section>
+
+    <section class="offer-banner page-wrap">
+      <div class="offer-sparkle">✦</div>
+      <div>
+        <p class="eyebrow">GOOD FINDS, EVEN BETTER PRICES</p>
+        <h2>Little prices. <em>Big smiles.</em></h2>
+      </div>
+      <p>More of what you love,<br>for less than you think.</p><a href="#products" class="offer-button">Find your
+        favourites <span>→</span></a>
+    </section>
+
+    <section class="products-section page-wrap" id="products">
+      <div class="section-heading product-heading">
+        <div>
+          <p class="eyebrow">HANDPICKED FOR YOU</p>
+          <h2>Popular right now</h2>
+        </div><label class="sort-control">Sort by <select id="sortSelect" aria-label="Sort products">
+            <option value="popular">Recommended</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select></label>
+      </div>
+      <div class="filter-row" id="filterRow"><button class="filter-chip active" data-category="All">All picks
+          <span>✦</span></button><button class="filter-chip" data-category="Women Ethnic">Ethnic wear</button><button
+          class="filter-chip" data-category="Women Western">Western</button><button class="filter-chip"
+          data-category="Men">Men</button><button class="filter-chip"
+          data-category="Home & Kitchen">Home</button><button class="filter-chip"
+          data-category="Beauty & Health">Beauty</button><button class="filter-chip"
+          data-category="Kids">Kids</button><button class="filter-chip"
+          data-category="Jewellery">Jewellery</button><button class="filter-chip"
+          data-category="Bags & Footwear">Bags</button><button class="filter-chip"
+          data-category="Electronics">Electronics</button></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span>
+        <h3>No finds just yet</h3>
+        <p>Try another search or explore all our picks.</p><button id="clearSearch" class="primary-button">Show all
+          products</button>
+      </div>
+      <div class="load-more-wrap"><button id="loadMore" class="load-more">You're all caught up <span>✦</span></button>
+      </div>
+    </section>
+
+    <section class="download-banner page-wrap">
+      <div class="download-copy">
+        <p class="eyebrow">YOUR FAVOURITES, ON THE GO</p>
+        <h2>Good things are<br>just a tap away.</h2>
+        <p>Download the Shop Cart app and find your next favourite wherever you are.</p><button class="app-download"
+          type="button"><span>▣</span><span><small>GET IT ON</small><strong>Google Play</strong></span><b>↗</b></button>
+      </div>
+      <div class="download-art">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="mini-brand">Shop Cart<span>.</span></div>
+            <div class="mini-search"></div>
+            <div class="mini-tiles"><span></span><span></span><span></span><span></span></div>
+            <div class="mini-product"></div>
+          </div>
+        </div><span class="float-heart">♡</span><span class="float-star">✦</span><span class="float-bag">🛍</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-wrap footer-main">
+      <div class="footer-brand"><a class="brand" href="#top">Shop Cart<span>.</span></a>
+        <p>Discover more. Spend less.<br>Shop a little joy every day.</p>
+      </div>
+      <div><strong>Shop</strong><a href="#products">Women</a><a href="#products">Men</a><a href="#products">Home &
+          Kitchen</a><a href="#products">Beauty</a></div>
+      <div><strong>Help & support</strong><a href="#top">Contact us</a><a href="#top">Returns & refunds</a><a
+          href="#top">Shipping info</a><a href="#top">FAQs</a></div>
+      <div class="footer-newsletter"><strong>Stay in the loop</strong>
+        <p>New finds and little surprises, straight to your inbox.</p>
+        <form id="newsletterForm"><input type="email" required placeholder="Your email address"
+            aria-label="Your email address"><button aria-label="Subscribe">→</button></form>
+      </div>
+    </div>
+    <div class="footer-bottom page-wrap"><span>© 2026 Shop Cart. Made with ♡ in India.</span><span>Privacy · Terms ·
+        Sitemap</span></div>
+  </footer>
+
+  <div class="auth-backdrop" id="authBackdrop" aria-hidden="true">
+    <section class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="auth-close" id="closeAuth" type="button" aria-label="Close">×</button>
+      <div class="auth-brand">Shop Cart<span>.</span></div>
+      <p class="auth-kicker">YOUR STYLE, YOUR CART</p>
+      <h2 id="authTitle">Welcome back</h2>
+      <p class="auth-subtitle" id="authSubtitle">Sign in to keep your favourites close.</p>
+      <div class="auth-tabs" id="authTabs" role="tablist" aria-label="Choose sign in or sign up">
+        <button class="active" type="button" data-auth-mode="login" role="tab" aria-selected="true">Login</button>
+        <button type="button" data-auth-mode="signup" role="tab" aria-selected="false">Sign up</button>
+      </div>
+      <form class="auth-form" id="authForm">
+        <label id="authNameField" hidden>Full name<input id="authName" type="text" autocomplete="name"
+            placeholder="Your name"></label>
+        <label>Email address<input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com"
+            required></label>
+        <label>Password<input id="authPassword" type="password" autocomplete="current-password"
+            placeholder="At least 8 characters" minlength="8" required></label>
+        <label id="authConfirmField" hidden>Confirm password<input id="authConfirm" type="password"
+            autocomplete="new-password" placeholder="Enter password again"></label>
+        <p class="auth-error" id="authError" role="alert"></p>
+        <p class="auth-note">Demo account is saved in this browser only. Don't use a real password.</p>
+        <button class="auth-submit" id="authSubmit" type="submit">Login to Shop Cart <span>→</span></button>
+      </form>
+      <div class="auth-success" id="authSuccess" hidden>
+        <div class="auth-success-icon">✓</div>
+        <h3 id="authWelcome">You're signed in</h3>
+        <p id="authAccountEmail"></p>
+        <button class="auth-signout" id="signOutButton" type="button">Sign out</button>
+      </div>
+    </section>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-header">
+      <div><small>YOUR BAG</small>
+        <h2>Your cart <span id="drawerItemCount">(0)</span></h2>
+      </div><button id="closeCart" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>🛍</span>
+      <h3>Your bag is waiting</h3>
+      <p>Add something lovely to get started.</p><button id="continueShopping" class="primary-button">Explore
+        finds</button>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div>
+      <p>Shipping and discounts calculated at checkout.</p><button class="checkout-button" id="checkoutButton">Continue
+        to checkout <span>→</span></button>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
